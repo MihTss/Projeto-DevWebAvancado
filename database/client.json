@@ -1,0 +1,24 @@
+[
+  {
+      "id": 1,
+      "nomeCompleto": "Milena",
+      "cpf": "05279163902",
+      "telefone": 41988661419,
+      "endereco": "Rua tal",
+      "cartaoCredito": "1234567891234567",
+      "email": "milena.schrickte@gmail.com",
+      "senha": "1234"
+  },
+  {
+    "id": 2,
+    "nomeCompleto": "Gabriel",
+    "cpf": "89896687425",
+    "telefone": 41958694875,
+    "endereco": "Rua tal",
+    "cartaoCredito": "1234567891234567",
+    "email": "Gabriel.rossa@gmail.com",
+    "senha": "5678"
+  }
+]
+
+

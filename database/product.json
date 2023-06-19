@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "nome": "Urso pelucia",
+        "imagem": "",
+        "descricao": "Urso de pelucia em formato de macaco",
+        "preco": "R$ 15,00",
+        "categoria": "1",
+        "animal": "Cachorro e Gato",
+        "comentarios": [{
+            "texto": "Muito bom",
+            "nota": "10"
+          }]
+    }
+  ]
+  
+  
+  
