@@ -1,15 +1,19 @@
 const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
-    id: Number,
+    id: {
+        type: Number,
+        autoCreate: true,
+      },
     nome:  String,
     imagem: String,
     descricao:  String,
-    preco:  String,
-    categoria:{ type: mongoose.Schema.Types.ObjectId, ref: 'categories' },
+    preco:  Number,
+    categoria:{ type: mongoose.Schema.Types.ObjectId, ref: 'categorias' },
     animal:  String,
     comentarios: [{
-         texto :  String ,
+         usuario: String,
+         texto :  String,
          nota :  Number 
     }]
 })

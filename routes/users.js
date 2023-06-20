@@ -4,6 +4,8 @@ const clientController    = require('../controllers/clientController')
 const categoriaController = require('../controllers/categoryController')
 const productController   = require('../controllers/productController')
 const pedidosController   = require('../controllers/orderController')
+const loginController = require('../controllers/loginController');
+
 
 // Endpoints clientes
 router.get('/listarCliente'         , clientController.listarCliente)
@@ -25,9 +27,16 @@ router.get('/idProduto/:id'         , productController.buscarPorIdProduto)
 router.put('/atualizarProduto/:id'  , productController.atualizarProduto)
 
 //Endopoints Pedidos
-router.post('/cadastrarPedidos'     , pedidosController.cadastrarPedidos)
-router.put('/atualizarPedidos/:id'      , pedidosController.atualizarPedidos)
+router.post('/cadastrarPedidos'              , pedidosController.cadastrarPedidos)
+router.put('/atualizarPedidos/:id'           , pedidosController.atualizarPedidos)
 router.get('/buscarPedidoPorNome/:cliente'   , pedidosController.buscarPedidoPorNome)
-router.get('/listarPedidos'         , pedidosController.listarPedidos)
+router.get('/listarPedidos'                  , pedidosController.listarPedidos)
+
+
+//Endpoints Login
+router.post('/login', loginController.login);
+
+
+
 
 module.exports = router

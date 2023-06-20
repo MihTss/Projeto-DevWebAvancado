@@ -5,7 +5,11 @@
       "cpf": "05279163902",
       "telefone": 41988661419,
       "endereco": "Rua tal",
-      "cartaoCredito": "1234567891234567",
+      "cartaoCredito": [{
+        "nome": "Milena Titericz Schrickte",
+        "numero": 2325652415245986,
+        "cvc": 123
+      }],
       "email": "milena.schrickte@gmail.com",
       "senha": "1234"
   },
@@ -15,7 +19,11 @@
     "cpf": "89896687425",
     "telefone": 41958694875,
     "endereco": "Rua tal",
-    "cartaoCredito": "1234567891234567",
+    "cartaoCredito": [{
+      "nome": "Gabriel Rossa",
+      "numero": 2325652415248886,
+      "cvc": 321
+    }],
     "email": "Gabriel.rossa@gmail.com",
     "senha": "5678"
   }

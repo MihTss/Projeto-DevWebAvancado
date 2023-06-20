@@ -1,15 +1,27 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-  id: Number,
-  precoTotal: String,
+  id: {
+    type: Number,
+    autoCreate: true,
+  },
+  precoTotal: Number,
   listaProdutos: [{
-    "nome": String,
-    "quantidade": Number
+    idProduct:{ type: mongoose.Schema.Types.ObjectId, ref: 'products' },
+    quantidade: Number,
   }],
-  cliente: { type: mongoose.Schema.Types.ObjectId, ref: 'clients' },
-  dateTime: { type: Date, default: Date.now },
-  status: Boolean,
-})
+  cliente: { type: mongoose.Schema.Types.ObjectId, ref: 'clients', require: true },
+  dateTime: {
+    type: Date,
+    default: Date.now,
+    require: true,
+    autoCreate: true,
+  },
+  status: {
+    type: String,
+    default: "Aguardando Pagamento",
+    autoCreate: true,
+  },
+});
 
-module.exports = mongoose.model('orders', userSchema)
+module.exports = mongoose.model('orders', userSchema);
