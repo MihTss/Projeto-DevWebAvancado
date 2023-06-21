@@ -21,7 +21,7 @@ class PedidoController {
               });
           }
           
-        const cliente = await clienteModel.findOne({ id: pedido.cliente });
+        const cliente = await clienteModel.findOne({ token: pedido.cliente });
         if (!cliente) {
         return res.status(404).json({ error: 'cliente não encontrado' });
         }

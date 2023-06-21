@@ -17,6 +17,7 @@ class LoginController {
         }
 
         await auth.incluirToken(cliente);
+        await clienteModel.findByIdAndUpdate(String(cliente._id), cliente);
         res.status(200).json(cliente);
     }
 }

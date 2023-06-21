@@ -11,7 +11,7 @@ class clientController {
       res.status(400).send({ error: 'Cliente já cadastrado!' });
   }
 
-    const resultado = await clientModel.create(user)
+    const resultado = await clientModel.create(cliente)
     res.status(201).json(resultado)
   }
 
